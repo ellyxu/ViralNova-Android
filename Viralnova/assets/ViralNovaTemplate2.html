@@ -1,0 +1,47 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+	<link rel="stylesheet" type="text/css" href="ViralNova.css">
+	<script src="template.js"></script>
+</head>
+
+<body>
+	<div id="title_pre"></div>
+	<div id="DnT">
+		<span id="date"></span>&nbsp;&nbsp;&nbsp;
+		<span id="type"></span>
+	</div>
+    <div id="article_body"></div>
+    
+    <script>
+		var data1 = Android.getTitle();
+		var obj = eval ("(" + data1 + ")");
+		document.getElementById('title_pre').innerHTML = obj.title;
+		document.getElementById('date').innerHTML = obj.date;
+		document.getElementById('type').innerHTML = obj.category;
+	</script>
+	
+	<script id="test" type="text/html">
+	    <% for (var i = 0; i < list.length; i ++) {
+	    		switch(list[i].type){
+	    			case "text":
+	    				%><p class="content_normal"><%=# list[i].text%></p><%
+	    				break;
+	    			case "image":
+	    				%><span class="image_pre_text"><%=# list[i].pre%></span><%
+	    				%><img src=<%= list[i].url %> style="max-width: 100%;" /><br/><%
+	    				%><span class="image_post_text"><%=# list[i].post%></span><%
+	    				break;
+	    		}
+	       } %>
+	</script>
+	
+	<script>
+	eval("var data = "+Android.getContent());
+	var html = template.render('test', data);
+	document.getElementById('article_body').innerHTML = html;
+	</script>
+
+</body>
+</html>

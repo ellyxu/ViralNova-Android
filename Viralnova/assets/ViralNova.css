@@ -1,0 +1,37 @@
+ #title_pre{
+       font-size: 20px;
+       color: #104E89;
+       font-weight: bold;
+      }
+      
+ #DnT{
+       font-size: 16px;
+       color: grey;
+       margin-top: 3px;
+	   margin-bottom: 3px;
+      }
+      
+ .content_normal{
+       font-size: 18px;
+       color: black;
+      }
+      
+ #content_bold{
+       font-size: 18px;
+       color: black;
+       font-weight: bold;
+      }
+      
+ .image_post_text{
+       font-size: 16px;
+       color: grey;
+       font-style: italic;
+      }
+      
+ .image_pre_text{
+       font-size: 18px;
+       color: black;
+       font-weight: bold;
+       text-align: center;
+      }
+ 

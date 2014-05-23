@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="3dp" >
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="So, There’s A Blind Gerbil Named Peppy. And You Really Have To See What Happened To Him, Trust Me."
+        android:textColor="#104E89"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/title"
+        android:text="April 14, 2014"
+        android:textColor="#3A3A3A"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/category"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/date"
+        android:layout_marginLeft="20dp"
+        android:layout_toRightOf="@id/date"
+        android:text="Stories"
+        android:textColor="#3A3A3A"
+        android:textSize="16sp" />
+
+    <ImageView
+        android:id="@+id/photo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/date"
+        android:src="@drawable/ic_launcher" />
+
+    <TextView
+        android:id="@+id/article_short"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/photo"
+        android:text="This is a story about hope and friendship, and a gerbil named Peppy. Peppy the gerbil was found in a pet store, all alone. He was blind..."
+        android:textColor="#232323"
+        android:textSize="18sp" />
+
+</RelativeLayout>

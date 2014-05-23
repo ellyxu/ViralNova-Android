@@ -1,0 +1,40 @@
+
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+	<link rel="stylesheet" type="text/css" href="ViralNova.css">
+	<script src="template.js"></script>
+</head>
+
+<body>
+	<div id="title_pre"></div>
+	<div id="DnT">
+		<span id="date"></span>&nbsp;&nbsp;&nbsp;
+		<span id="type"></span>
+	</div>
+    <div id="article_body"></div>
+    
+    <script>
+		eval("var data = "+Android.getJson());
+		document.getElementById('title_pre').innerHTML = data.title;
+		document.getElementById('date').innerHTML = data.date;
+		document.getElementById('type').innerHTML = data.type;
+	</script>
+	
+	<script id="test" type="text/html">
+	    <% for (var i = 0; i < list.length; i ++) { %>
+	        <img src=<%= list[i] %> style="max-width: 100%;" /><br/>
+	    <% } %>
+	</script>
+	
+	<script>
+	var data = {
+		list: ['http://content3.viralnova.com/wp-content/uploads/2014/05/bake.jpeg', 'http://content3.viralnova.com/wp-content/uploads/2014/05/vintage-ads-future.jpg']
+	};
+	var html = template.render('test', data);
+	document.getElementById('article_body').innerHTML = html;
+	</script>
+
+</body>
+</html>
